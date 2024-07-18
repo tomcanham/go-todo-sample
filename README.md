@@ -4,11 +4,17 @@ To run the stack, you can simply run `docker compose up`. However, for the first
 
 First, start the DB service in the Compose stack with the following command:
 
-`docker compose start db`
+```
+docker compose start db
+```
+
+This will pull the images (if necessary) and start the Postgres database, so you can run the initial migration.
 
 After Postgres has started and you have installed the `migrate` tool, run the following command (from the root of this repository) to perform the initial migration:
 
-`migrate -path db/migrations/ -database "postgresql://postgres:password@localhost:5432/postgres?sslmode=disable" -verbose up`
+```
+migrate -path db/migrations/ -database "postgresql://postgres:password@localhost:5432/postgres?sslmode=disable" -verbose up
+```
 
 You should see some output similar to the following:
 
@@ -30,15 +36,21 @@ The API is available at http://localhost:8080/api (see main.go for routes).
 
 In the frontend folder, there is a very minimal (for now) UI for the backend API. To install, you'll need a recent version of Node.js installed (I was working with v21.6.0). You will need `yarn` as well:
 
-`npm install -G yarn`
+```
+npm install -G yarn
+```
 
 Then from the frontend folder, run:
 
-`yarn install`
+```
+yarn install
+```
 
 And finally, with the backend running (see above), type:
 
-`yarn dev`
+```
+yarn dev
+```
 
 And navigate to http://localhost:5173
 
