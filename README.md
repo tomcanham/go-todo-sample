@@ -26,6 +26,23 @@ Now, you should be able to start the full stack with:
 docker compose up
 ```
 
-Browse to http://localhost:8080 to see the app!
+The API is available at http://localhost:8080/api (see main.go for routes).
 
-Note: for now, only an API layer is present, viewable at `http://localhost:8080/api/todos` (see `main.go` for the routes supported). Coming soon: a React frontend!
+In the frontend folder, there is a very minimal (for now) UI for the backend API. To install, you'll need a recent version of Node.js installed (I was working with v21.6.0). You will need `yarn` as well:
+
+`npm install -G yarn`
+
+Then from the frontend folder, run:
+
+`yarn install`
+
+And finally, with the backend running (see above), type:
+
+`yarn dev`
+
+And navigate to http://localhost:5173
+
+TODO:
+
+- Improve the appearance/functionality of the frontend
+- Dockerize the frontend so that the backend can serve it as a static page
