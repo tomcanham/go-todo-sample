@@ -1,4 +1,4 @@
-This is a sample Todo app (is that the new "hello world" of web apps?) written in Golang (using the Gin web stack and the Bun DB layer/ORM). The database layer is Postgres.
+This is a sample Todo app (is that the new "hello world" of web apps?) written in Golang (using the Gin web stack and the Bun DB layer/ORM). The database layer is Postgres. The frontend is React (built and served with Vite).
 
 To run the stack, you can simply run `docker compose up`. However, for the first run, you'll need to run database migrations using the `migrate` tool (https://github.com/golang-migrate/migrate).
 
