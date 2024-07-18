@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"strconv"
 
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"github.com/uptrace/bun"
 )
@@ -161,6 +162,13 @@ func main() {
 
 	// Create a new router
 	r := gin.Default()
+
+	// Install CORS
+	config := cors.DefaultConfig()
+	config.AllowMethods = []string{"GET", "POST", "PUT", "DELETE", "HEAD", "OPTIONS"}
+	config.AllowAllOrigins = true
+
+	r.Use(cors.New(config))
 
 	// Get all todos
 	r.GET("/api/todos", getTodos)
