@@ -2,6 +2,8 @@ This is a sample Todo app (is that the new "hello world" of web apps?) written i
 
 To run the stack, you can simply run `docker compose up`. However, for the first run, you'll need to run database migrations using the `migrate` tool (https://github.com/golang-migrate/migrate).
 
+Note: for demonstration purposes, there is also an ASP.Net Core 8 API server backend. I'll add docs for building this in the future.
+
 First, start the DB service in the Compose stack with the following command:
 
 ```

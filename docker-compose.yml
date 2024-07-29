@@ -1,6 +1,6 @@
 services:
   backend:
-    build: ./backend
+    build: ./backend/golang
     ports:
       - "8080:8080"
 
