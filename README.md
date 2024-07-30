@@ -60,3 +60,4 @@ TODO:
 
 - Improve the appearance/functionality of the frontend
 - Dockerize the frontend so that the backend can serve it as a static page
+- Add authentication/multitenant features
